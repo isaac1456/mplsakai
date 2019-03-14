@@ -268,7 +268,7 @@ cp ${Particion}/mysql-connector-java-5.1.39/mysql-connector-java-5.1.39-bin.jar 
 # grant all on sakai11db.* to sakai11user@'127.0.0.1' identified by 'MysqlP.11L#2016';
 # flush privileges;
 
-sudo -u postgres createuser -P -s <db_owner_name>
+sudo -u postgres createuser -p -s ${usuariobd}
 #Enter password for new role: <db_owner_password>
 #Enter it again: <db_owner_password>
 sudo -u postgres psql template1
