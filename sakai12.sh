@@ -378,7 +378,7 @@ echo " "
 # Verificar permisos y propiedades
 chown -R $usuario:$usuario ${Particion}/tomcat && chmod -R 775 ${Particion}/tomcat;
 chown -R $usuario:$usuario ${Particion}/sakai && chmod -R 775 ${Particion}/sakai;
-chown $usuario:$usuario -R ${Particion}/apache-tomcat-8.0.36 && chmod -R 775 ${Particion}/apache-tomcat-8.0.36;
+chown $usuario:$usuario -R ${Particion}/apache-tomcat-8.5.38 && chmod -R 775 ${Particion}/apache-tomcat-8.5.38;
 
 # Borrando archivos innecesarios
 echo "Borrando archivos que no son necesarios..."
