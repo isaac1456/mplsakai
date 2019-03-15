@@ -147,7 +147,7 @@ echo " "
 export JAVA_HOME=${Particion}/jdk1.8.0_201;
 export CATALINA_HOME=${Particion}/tomcat;
 export PATH=${PATH}:${JAVA_HOME}/bin/:${CATALINA_HOME}/bin;
-export MAVEN_OPTS='-Xms512m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m -Djava.util.Arrays.useLegacyMergeSort=true'
+export MAVEN_OPTS='-Xms512m -Xmx1024m -Djava.util.Arrays.useLegacyMergeSort=true'
 
 
 sed -i "17a # ----------------------------------------------------------------------------" ${Particion}/tomcat/bin/catalina.sh;
@@ -174,7 +174,7 @@ EOF
 # para ubicar archivo *.properties en otra ubicacion
 # -Dsakai.home=/path/to/desired/sakai/home/
 sed -i '1c #! /bin/sh' ${Particion}/tomcat/bin/setenv.sh;
-sed -i "2c export JAVA_OPTS='-server -Xms512m -Xmx1024m -XX:PermSize=128m -XX:NewSize=192m -XX:MaxNewSize=384m -Djava.awt.headless=true -Dhttp.agent=Sakai -Dorg.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING=false -Dsun.lang.ClassLoader.allowArraySyntax=true -Duser.language=es -Duser.region=CO'" ${Particion}/tomcat/bin/setenv.sh;
+sed -i "2c export JAVA_OPTS='-server -Xms512m -Xmx1024m -XX:PermSize=128m -XX:NewSize=192m -XX:MaxNewSize=384m -Djava.awt.headless=true -Dhttp.agent=Sakai -Dorg.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING=false -Dsun.lang.ClassLoader.allowArraySyntax=true -Djava.util.Arrays.useLegacyMergeSort=true -Dsakai.demo=true'" ${Particion}/tomcat/bin/setenv.sh;
 
 
 ##### Especificar proxy HTTP ########################################################
