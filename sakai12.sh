@@ -156,7 +156,7 @@ sed -i "19a # ------------------------------------------------------------------
 sed -i "20a \ #" ${Particion}/tomcat/bin/catalina.sh;
 sed -i "21a export CATALINA_HOME=`echo $Particion`/tomcat" ${Particion}/tomcat/bin/catalina.sh;
 sed -i "22a export CATALINA_BASE=`echo $Particion`/tomcat" ${Particion}/tomcat/bin/catalina.sh;
-sed -i "23a export JAVA_HOME=`echo $Particion`/jdk1.8.0_92" ${Particion}/tomcat/bin/catalina.sh;
+sed -i "23a export JAVA_HOME=`echo $Particion`/jdk1.8.0_201" ${Particion}/tomcat/bin/catalina.sh;
 sed -i "24a export PATH=${PATH}:${JAVA_HOME}/bin/:${CATALINA_HOME}/bin" ${Particion}/tomcat/bin/catalina.sh;
 
 
@@ -174,7 +174,7 @@ EOF
 # para ubicar archivo *.properties en otra ubicacion
 # -Dsakai.home=/path/to/desired/sakai/home/
 sed -i '1c #! /bin/sh' ${Particion}/tomcat/bin/setenv.sh;
-sed -i "2c export JAVA_OPTS='-server -Xms512m -Xmx1024m -XX:PermSize=128m -XX:NewSize=192m -XX:MaxNewSize=384m -Djava.awt.headless=true -Dhttp.agent=Sakai -Dorg.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING=false -Dsun.lang.ClassLoader.allowArraySyntax=true -Duser.language=es -Duser.region=CO'" ${Particion}/tomcat/bin/setenv.sh;
+sed -i "2c export JAVA_OPTS='-server -Xms512m -Xmx1024m -XX:PermSize=128m -XX:NewSize=192m -XX:MaxNewSize=384m -Djava.awt.headless=true -Dhttp.agent=Sakai -Dorg.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING=false -Dsun.lang.ClassLoader.allowArraySyntax=true -Djava.util.Arrays.useLegacyMergeSort=true -Dsakai.demo=true'" ${Particion}/tomcat/bin/setenv.sh;
 
 
 ##### Especificar proxy HTTP ########################################################
@@ -384,7 +384,7 @@ chown $usuario:$usuario -R ${Particion}/apache-tomcat-8.0.36 && chmod -R 775 ${P
 echo "Borrando archivos que no son necesarios..."
 echo " "
 cd ${Particion};
-rm -r jdk-8u92-linux-x64.tar.gz mysql-connector-java-5.1.39.tar.gz apache-tomcat-8.0.36.tar.gz apache-tomcat-8.0.36.tar.gz.sha1 mysql-connector-java-5.1.39;
+rm -r jdk-8u201-linux-x64.tar.gz mysql-connector-java-5.1.39.tar.gz apache-tomcat-8.5.38.tar.gz apache-tomcat-8.5.38.tar.gz.sha512 mysql-connector-java-5.1.39;
 
 # # arranque de la aplicacion
 # echo "Iniciando sakai 11... "
