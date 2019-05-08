@@ -1,0 +1,28 @@
+username@javax.sql.BaseDataSource=area_ti
+password@javax.sql.BaseDataSource=8xWXTskGSE7f_
+#username@javax.sql.BaseDataSource=sakai_111_user
+#password@javax.sql.BaseDataSource=Qz7QgR?:&/W{O;w|.sa~8Z9!$&Rmt)APm0E2fKt_N@>ENIsl"NmXI+8KR{oKuS!sm
+# QUICK LINKS CONFIG ON TOP NAV BAR
+# QUICK LINKS CONFIG ON TOP NAV BAR
+# url, title, name and icon must be populated.
+# These can be per skin as well as the top level, put the skin name in the key e.g. portal.quicklink.[skin].url.1
+# Icon entry can specify an icon to be used as an HTML class or an image to be added as a background-image 
+# attribute in the HTML. If using an icon put 'cl' before the name, if using an image put 'im' before the name.
+# Information message at the top of the quicklinks pop-up box:
+#portal.quicklink.info=Links open in a new window 
+#portal.quicklink.url.count=2
+#portal.quicklink.title.count=2
+#portal.quicklink.name.count=2
+#portal.quicklink.icon.count=2
+#portal.quicklink.url.1=https://sakaiproject.org/
+#portal.quicklink.title.1=Sakai Project Website
+#portal.quicklink.name.1=Sakai Project
+#portal.quicklink.icon.1=im /library/image/sakai/url.gif
+vendor@org.sakaiproject.db.api.SqlService=mysql
+driverClassName@javax.sql.BaseDataSource=com.mysql.jdbc.Driver
+hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+#url@javax.sql.BaseDataSource=jdbc:mysql://asira-instance-db03.clvtpcf3sod7.us-east-1.rds.amazonaws.com:3306/sakai11xdb?useUnicode=true&characterEncoding=UTF-8
+url@javax.sql.BaseDataSource=jdbc:mysql://ecampusdevdb01.clvtpcf3sod7.us-east-1.rds.amazonaws.com:3306/sk19?useUnicode=true&characterEncoding=UTF-8
+validationQuery@javax.sql.BaseDataSource=select 1 from DUAL
+defaultTransactionIsolationString@javax.sql.BaseDataSource=TRANSACTION_READ_COMMITTED
+# DATABASE
